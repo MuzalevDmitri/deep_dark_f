@@ -1,1 +1,19 @@
-@import url("/dungen/style/reset.css")
+
+.blocs {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: 2px;
+    transition: .3s;
+}
+
+.box:hover {
+    box-shadow:2px 2px 2px blue;
+    border: 4px;
+}
