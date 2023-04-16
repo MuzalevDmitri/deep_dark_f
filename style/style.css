@@ -7,7 +7,6 @@ body {
     width: 100%;
     margin: 0 auto;
     color: #fff;
-    cursor: grabbing;
     
 }
 
@@ -82,4 +81,52 @@ header {
 
 h1 {
     color: darkmagenta;
+}
+
+
+.menu {
+    cursor: pointer;
+}
+
+.menu:hover {
+    display: none;
+}
+
+.menu:hover {
+    cursor: pointer;
+    background-color: blue;
+
+}
+
+.bgmenu {
+    position: fixed;
+    width: 12px;
+    height: 3px;
+    background-color: #000;
+    left: 30px;
+    top: 30px;
+    font-size: 30px;
+    content: '';
+}
+
+
+.bgmenu::after {
+    position: fixed;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    left: 30px;
+    top: 20px;
+    font-size: 30px;
+    content: '';
+}
+.bgmenu::before {
+    position: fixed;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    left: 30px;
+    top: 40px;
+    font-size: 30px;
+    content: '';
 }
