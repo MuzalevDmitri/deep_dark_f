@@ -211,5 +211,37 @@ h1 {
     background-attachment: fixed;
     background-image: url('https://phonoteka.org/uploads/posts/2022-09/1663805305_8-phonoteka-org-p-billi-kherrington-oboi-krasivo-9.jpg');
     margin-bottom: 50px;
+
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    top: 20px;
+    font-size: 30px;
+    content: '';
+    z-index: 888;
+
 }
 
+footer {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(99,99,99,1) 98%, rgba(164,164,164,1) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+}
+
+.gachi-img{
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    /* position: absolute; */
+}
+
+.foot-list{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
