@@ -159,6 +159,12 @@
         </div>
 
 
+        <div id="app" class="calk">
+                    {{message}}
+
+        </div>
+
+
     </div>
     </div>
     <script src="/app.js"></script>
@@ -174,5 +180,24 @@
         </div>
     </footer>
     <button id="myBtn" onclick="topFunction()">Наверх</button>
+
+    <script src="https://unpkg.com/vue@next"></script>
+         <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: 'Привет, мир!',
+            
+          }
+        },
+
+        methods: {
+            
+        }
+      })
+
+      app.mount('#app')
+      </script>
+
 </body>
 </html>
