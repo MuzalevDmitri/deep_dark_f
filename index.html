@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,14 @@
     <title>Document</title>
 </head>
 <body class="body">
+
+    <div id="myModal" class="modal">
+        <!-- Содержимое всплывающего окна -->
+        <div class="modal-content">
+          <span id="closeModalBtn" class="close">&times;</span>
+          <img src="https://sun9-22.userapi.com/impf/c855616/v855616166/9cf15/uj0J-oap3wU.jpg?size=604x455&quality=96&sign=d3119f01663c7f45a88e197f60d94adf&type=album" alt="">
+        </div>
+      </div>
 
     <div class="menu-hover">
         <ul>
@@ -41,7 +50,7 @@
 
 </nav>
 <div class="sign">
-    <span>Sign up</span>
+    <button id="openModalBtn">Открыть всплывающее окно</button>
 </div>
 </header>
 
@@ -150,5 +159,13 @@
     </div>
     
     </footer>
+
+
+
+
+  
+
+    <button id="myBtn" onclick="topFunction()">Наверх</button>
+
 </body>
 </html>
