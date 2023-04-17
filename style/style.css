@@ -1,17 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
 * {
     padding: 0;
-    margin:0;
+    margin: 0;
+
 }
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
     box-sizing: border-box;
     background-image: url('https://kartinkin.net/pics/uploads/posts/2022-08/thumbs/1661353804_75-kartinkin-net-p-fon-mario-dlya-skretch-krasivo-78.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+
+
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    content: '';
+
+
+}
+
+
+a::after {
+    height: 3px;
+    background-color: red;
+    width: 0%;
+    content: '';
+    display: block;
+    transition: width .3s ease-in-out;
+
+
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 .container {
@@ -19,7 +49,7 @@ body {
     width: 100%;
     margin: 0 auto;
     color: #fff;
-    
+
 }
 
 ul {
@@ -30,18 +60,20 @@ ul li {
     margin-left: 12px;
     list-style: none;
 }
+
 header {
     display: flex;
     align-items: center;
-    
+
     justify-content: space-between;
     background-color: rgb(0 0 0 / 70%);
     padding: 0 20px;
     height: 100px;
     margin-bottom: 50px;
+    border-radius: 20px;
 }
 
-.sign  > span {
+.sign>span {
     padding: 3px 10px;
     border-radius: 20px;
     border: 1px solid #fff;
@@ -50,7 +82,7 @@ header {
 
 .box {
     width: 220px;
-    height:400px;
+    height: 400px;
     background-color: #fff;
     color: #000;
     position: relative;
@@ -58,7 +90,8 @@ header {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.box h3, .box p {
+.box h3,
+.box p {
     padding: 10px;
 }
 
@@ -90,7 +123,7 @@ header {
 .catalog {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 
@@ -100,7 +133,7 @@ h1 {
 
 
 .menu {
-  
+
     background-color: #fff;
     display: block;
     width: 60px;
@@ -112,7 +145,7 @@ h1 {
     position: relative;
     left: 25px;
     top: 20px;
-    
+
 }
 
 
@@ -125,16 +158,16 @@ h1 {
 
 .bgmenu {
     position: absolute;
-    width:25px;
+    width: 25px;
     height: 3px;
     background-color: #000;
-   
+
     font-size: 30px;
     content: '';
     display: block;
     z-index: 888;
     top: 20px;
-    left:20px;
+    left: 20px;
     transition: 0.7s;
 
 }
@@ -151,8 +184,9 @@ h1 {
     content: '';
     z-index: 888;
 
-    
+
 }
+
 .bgmenu::before {
     position: absolute;
     width: 25px;
@@ -162,11 +196,7 @@ h1 {
     font-size: 30px;
     content: '';
     z-index: 888;
-
 }
-
-
-
 
 .menu-hover {
     display: block;
@@ -177,7 +207,6 @@ h1 {
     position: fixed;
     left: -300px;
     transition: 0.5s;
-
 }
 
 .menu-hover ul {
@@ -187,26 +216,22 @@ h1 {
     padding: 20px;
     align-items: center;
     margin-top: 130px;
-  
 }
 
-
-.menu:hover .bgmenu::after{
+.menu:hover .bgmenu::after {
     display: none;
 }
 
-.menu:hover .bgmenu{
+.menu:hover .bgmenu {
     transform: rotate(120deg);
     top: 18px;
 }
 
-.menu:hover .bgmenu::before{
+.menu:hover .bgmenu::before {
     transform: rotate(-240deg);
     top: -10px;
     right: -18px;
 }
-
-
 
 .addMenu {
     left: 0px;
@@ -230,21 +255,21 @@ h1 {
 }
 
 footer {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(99,99,99,1) 98%, rgba(164,164,164,1) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(99, 99, 99, 1) 98%, rgba(164, 164, 164, 1) 100%);
     width: 100%;
     min-height: 80px;
     display: flex;
 }
 
-.gachi-img{
+.gachi-img {
     height: 100%;
     right: 0;
     bottom: 0;
     /* position: absolute; */
 }
 
-.foot-list{
+.foot-list {
     display: flex;
     justify-content: center;
     color: #fff;
@@ -254,7 +279,7 @@ footer {
 .slide-bar {
     display: flex;
     overflow: hidden;
-  
+
 }
 
 .block-slide {
@@ -274,7 +299,8 @@ footer {
 }
 
 
-.prev , .back {
+.prev,
+.back {
     background-color: rgba(0, 0, 0, 0.404);
     color: #fff;
     border-radius: 100%;
@@ -296,7 +322,7 @@ footer {
     bottom: 50%;
 }
 
-.back{
+.back {
     left: 0px;
     bottom: 50%;
 }
@@ -310,6 +336,7 @@ footer {
     margin-bottom: 100px;
     overflow: hidden;
 }
+
 .slide_show {
     max-width: 400px;
 }
@@ -318,7 +345,7 @@ footer {
     position: absolute;
     right: 0;
     width: 80px;
-    height:80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -389,17 +416,15 @@ footer {
     position: relative;
 }
 
-
-
-
 .slider {
     position: relative;
     width: 100%;
     height: 500px;
     overflow: hidden;
     z-index: 000000;
-  }
-  .slide {
+}
+
+.slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -407,17 +432,18 @@ footer {
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-  }
-  .slide.active {
+}
+
+.slide.active {
     opacity: 1;
-  }
+}
 
 
-  .prev {
+.prev {
     position: absolute;
     right: 0;
     width: 80px;
-    height:80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -426,7 +452,7 @@ footer {
     top: 40%;
     left: 5%;
     cursor: pointer;
-  }
+}
 
 
 .next:hover {
@@ -449,26 +475,26 @@ footer {
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-  }
-  
-  #myBtn:hover {
+}
+
+#myBtn:hover {
     background-color: #555;
-  }
+}
 
 
 
 
-  #openModalBtn {
+#openModalBtn {
     padding: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  /* Стили для всплывающего окна */
-  .modal {
+}
+
+/* Стили для всплывающего окна */
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -477,11 +503,11 @@ footer {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-  }
-  
-  /* Стили для содержимого всплывающего окна */
-  .modal-content {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для содержимого всплывающего окна */
+.modal-content {
     background-color: #3fb1ff;
     color: #fff;
     margin: 10% auto;
@@ -490,10 +516,10 @@ footer {
     width: 80%;
     max-width: 600px;
     border-radius: 5px;
-  }
-  
-  /* Стили для кнопки закрытия всплывающего окна */
-  .close {
+}
+
+/* Стили для кнопки закрытия всплывающего окна */
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -501,11 +527,55 @@ footer {
     font-weight: bold;
     color: #aaaaaa;
     cursor: pointer;
-  }
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
+
+.sublist {
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+.sublist.active {
+    opacity: 1;
+}
+
+
+
+
+.spisok {
+    width: 100%;
+    background-color: darkorange;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    margin: 60px 0;
+
+}
+
+
+.toggle {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    transition: 1s;
+}
+
+.sublist li:nth-child(1) {
+    margin-top: 30px;
+    transition: 1s;
+
+}
