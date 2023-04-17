@@ -223,14 +223,15 @@ h1 {
 }
 
 footer {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(99,99,99,1) 98%, rgba(164,164,164,1) 100%);
+    background-color: rgba(0, 0, 0, 0.527);
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     min-height: 80px;
     display: flex;
+    align-items: center;
+    /* justify-content: ; */
 }
 
 .gachi-img{
@@ -242,6 +243,7 @@ footer {
 
 .foot-list{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     color: #fff;
+
 }
