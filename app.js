@@ -37,3 +37,57 @@ document.querySelector('.next').addEventListener('click', () => {
 });
 
 showSlide(0);
+
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+
+function topFunction() {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+
+
+
+  // Получаем кнопку открытия всплывающего окна
+var openModalBtn = document.getElementById("openModalBtn");
+
+// Получаем всплывающее окно
+var modal = document.getElementById("myModal");
+
+// Получаем кнопку закрытия всплывающего окна
+var closeModalBtn = document.getElementById("closeModalBtn");
+
+// Добавляем обработчик события для кнопки открытия всплывающего окна
+openModalBtn.onclick = function() {
+  modal.style.display = "block";
+};
+
+// Добавляем обработчик события для кнопки закрытия всплывающего окна
+closeModalBtn.onclick = function() {
+  modal.style.display = "none";
+};
+
+// Добавляем обработчик события для закрытия всплывающего окна при клике вне его области
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
