@@ -589,3 +589,51 @@ footer {
     justify-content: center;
     color: #000;
 }
+
+
+.bg {
+    background: #191828;
+    height: 500px;
+    margin-top: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bg_left {
+    font-size: 18px;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.bg_left button {
+    background: none;
+    outline: none;
+    border: 0;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-top: 40px;
+    padding: 10px 50px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.bg_left button:hover {
+    background-color: #fff;
+    color: #191828;
+}
+
+.bg_right {
+   width: 100%;
+    height: 100%;
+}
+
+.bg_right video {
+   height: 100%;
+}
+
+ 
