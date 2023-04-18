@@ -97,13 +97,13 @@ const toggles = document.querySelectorAll('.toggle');
 
 // Добавить обработчик события для каждой кнопки
 toggles.forEach(toggle => {
-  toggle.addEventListener('click', () => {
-    // Получить список, который нужно отобразить или скрыть
-    const sublist = toggle.nextElementSibling;
+    toggle.addEventListener('click', () => {
+        // Получить список, который нужно отобразить или скрыть
+        const sublist = toggle.nextElementSibling;
 
-    // Переключить класс "active", чтобы показать или скрыть список
-    sublist.classList.toggle('active');
-  });
+        // Переключить класс "active", чтобы показать или скрыть список
+        sublist.classList.toggle('active');
+    });
 });
 
 
@@ -129,3 +129,35 @@ function addTodo() {
 }
 
 ///preloader
+
+
+
+
+//game
+
+let pole = document.querySelector('.game')
+let block = document.querySelector('.game-block')
+
+let counter = 0;
+
+
+
+
+
+block.addEventListener('click', GoGame)
+
+function GoGame() {
+
+    // let min = 0
+    // let max = 1000
+
+    let dx = Math.floor(Math.random() * (970 - 1 + 1)) + 1;
+    let dy = Math.floor(Math.random() * (270 - 1 + 1)) + 1;
+    counter += 1
+    block.style.left = dx + 'px'
+    block.style.top = dy + 'px'
+    console.log(counter)
+
+}
+
+setTimeout(() => alert(counter), 10000);

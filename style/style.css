@@ -692,3 +692,24 @@ footer {
 
 }
  
+
+.game {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+height: 300px;
+margin-top: 50px;
+}
+
+.game-block {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    
+}
+.game-block:hover{
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+}
