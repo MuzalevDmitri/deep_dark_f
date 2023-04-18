@@ -144,6 +144,15 @@ function addTodo() {
 
 function startGame() {
 
+    function muz() {
+        var audio = new Audio(); // Создаём новый элемент Audio
+        audio.src = '2.mp3'; // Указываем путь к звуку "клика"
+        audio.autoplay = true; // Автоматически запускаем
+    }
+
+    muz()
+
+    //запускаем аудио дорожку
     let but = document.querySelector('.game-btn').style.display = 'none'
 
     //game
@@ -153,7 +162,8 @@ function startGame() {
 
 
 
-    let counter = 0;
+    let counter = 0; //счетчик убийств
+    let timeGame = 10000 //время раунда
 
     block.addEventListener('click', GoGame)
 
@@ -165,19 +175,36 @@ function startGame() {
         let dx = Math.floor(Math.random() * (830 - 1 + 1)) + 1;
         let dy = Math.floor(Math.random() * (530 - 1 + 1)) + 1;
         counter += 1
+
         block.style.left = dx + 'px'
         block.style.top = dy + 'px'
+
+        // Аудиодорожка
+
+        function soundClick() {
+            var audio = new Audio(); // Создаём новый элемент Audio
+            audio.src = '1.mp3'; // Указываем путь к звуку "клика"
+            audio.autoplay = true; // Автоматически запускаем
+        }
+
+       
+
+        
+
+        soundClick()
+
+        //передижважение дракона
+
+        setInterval(() => {
+            block.style.left = dx + 'px'
+            block.style.top = dy + 'px'
+        }, 2000);
+
         console.log(counter)
-
     }
-
-
     setTimeout(() => {
-        endGame()
-    }, 10000)
-
-
-
+        endGame(), finalSound() //конец игры
+    }, timeGame) //время раунда
 
 
     function endGame() {
@@ -187,29 +214,27 @@ function startGame() {
         let finish = ''
 
         res.innerHTML += counter
-       
 
 
-        if (counter < 5) {
-            finish = 'лох пи**'
-        }
-        if (counter < 10) {
-            finish = 'ну уже лучше'
-        }
 
         if (counter < 15) {
-            finish = 'а ты не плох'
+            finish = 'лооооох пи**'
+        }
+        if (counter > 15) {
+            finish = 'ну моя бабка и то лучше'
         }
 
         dis.innerHTML += finish
-
-
-
         console.log(finish)
 
+    
 
-
-
+        function finalSound() {
+            var audio = new Audio(); // Создаём новый элемент Audio
+            audio.src = '3.mp3'; // Указываем путь к звуку "клика"
+            audio.autoplay = true; // Автоматически запускаем
+        }
+        finalSound() 
     }
 
 

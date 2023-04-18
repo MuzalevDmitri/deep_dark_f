@@ -717,9 +717,13 @@ footer {
     height: 140px;
     background-image: url('https://1.bp.blogspot.com/-EjycbR_DD5w/WueZL0fD_EI/AAAAAAAABxo/58bWaJ_VJbIqPgO-towc2kh0rcYYF0R6wCLcBGAs/s320/Dragon%2BGif%2B1.gif');
     background-size: cover;
-    
+    transition: .6s;
 
 }
+
+
+
+
 
 
 
