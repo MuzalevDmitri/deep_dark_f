@@ -120,11 +120,7 @@ header {
 }
 
 
-.catalog {
-    display: flex;
-    justify-content: space-around;
 
-}
 
 
 h1 {
@@ -643,5 +639,56 @@ footer {
     background-color: #fff;
     border-radius: 20px;
     margin: 50px 0;
+}
+
+
+.catalog {
+    min-height: 100px;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 30px;
+    color: #000;
+}
+
+
+.catalog ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog ul li {
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.catalog ul li:hover {
+    background-color: #F5F5F5;
+}
+
+#todoInput {
+
+    padding: 10px;
+    width: 400px;
+    font-size: 16px;
+}
+
+.catalog button {
+    background-color: #0077CC;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.catalog h1 {
+    margin-bottom: 30px;
+
 }
  

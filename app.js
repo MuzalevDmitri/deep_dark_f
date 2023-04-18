@@ -107,4 +107,25 @@ toggles.forEach(toggle => {
 });
 
 
+let todoList = [];
+
+function addTodo() {
+    let todoInput = document.getElementById("todoInput");
+    let todoListElement = document.getElementById("todoList");
+
+    if (todoInput.value !== "") {
+        let todo = {
+            id: todoList.length + 1,
+            task: todoInput.value
+        };
+
+        todoList.push(todo);
+        todoInput.value = "";
+
+        let li = document.createElement("li");
+        li.appendChild(document.createTextNode(todo.task));
+        todoListElement.appendChild(li);
+    }
+}
+
 ///preloader
