@@ -256,6 +256,8 @@ footer {
     width: 100%;
     min-height: 80px;
     display: flex;
+    align-items: center;
+    /* justify-content: ; */
 }
 
 .gachi-img {
@@ -267,8 +269,9 @@ footer {
 
 .foot-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     color: #fff;
+
 }
 
 
