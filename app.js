@@ -1,3 +1,7 @@
+const {
+    renderSlot
+} = require("@vue/runtime-core")
+
 let menuHover = document.querySelector('.menu-hover')
 let menu = document.querySelector('.menu')
 let blockSlide = document.querySelector('.block-slide')
@@ -107,6 +111,12 @@ toggles.forEach(toggle => {
 });
 
 
+
+
+
+
+
+
 let todoList = [];
 
 function addTodo() {
@@ -132,32 +142,76 @@ function addTodo() {
 
 
 
+function startGame() {
 
-//game
+    let but = document.querySelector('.game-btn').style.display = 'none'
 
-let pole = document.querySelector('.game')
-let block = document.querySelector('.game-block')
+    //game
 
-let counter = 0;
-
-
-
+    let pole = document.querySelector('.game')
+    let block = document.querySelector('.game-block')
 
 
-block.addEventListener('click', GoGame)
 
-function GoGame() {
+    let counter = 0;
 
-    // let min = 0
-    // let max = 1000
+    block.addEventListener('click', GoGame)
 
-    let dx = Math.floor(Math.random() * (970 - 1 + 1)) + 1;
-    let dy = Math.floor(Math.random() * (270 - 1 + 1)) + 1;
-    counter += 1
-    block.style.left = dx + 'px'
-    block.style.top = dy + 'px'
-    console.log(counter)
+    function GoGame() {
+
+        // let min = 0
+        // let max = 1000
+
+        let dx = Math.floor(Math.random() * (830 - 1 + 1)) + 1;
+        let dy = Math.floor(Math.random() * (530 - 1 + 1)) + 1;
+        counter += 1
+        block.style.left = dx + 'px'
+        block.style.top = dy + 'px'
+        console.log(counter)
+
+    }
+
+
+    setTimeout(() => {
+        endGame()
+    }, 10000)
+
+
+
+
+
+    function endGame() {
+        let end = document.querySelector('.end').style.display = 'block'
+        let res = document.querySelector('.result')
+        let dis = document.querySelector('.result-d')
+        let finish = ''
+
+        res.innerHTML += counter
+       
+
+
+        if (counter < 5) {
+            finish = 'лох пи**'
+        }
+        if (counter < 10) {
+            finish = 'ну уже лучше'
+        }
+
+        if (counter < 15) {
+            finish = 'а ты не плох'
+        }
+
+        dis.innerHTML += finish
+
+
+
+        console.log(finish)
+
+
+
+
+    }
+
+
 
 }
-
-setTimeout(() => alert(counter), 10000);
