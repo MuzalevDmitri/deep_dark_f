@@ -16,30 +16,37 @@ let correntThisImg = 0
 thisimg.src = imgArray[correntThisImg];
 
 
-btnN.addEventListener('click', function () {
-    correntThisImg++
-    if (correntThisImg === imgArray.length) {
-        correntThisImg = 0
-    }
-    thisimg.src = imgArray[correntThisImg];
-    thisimg.classList.add('addAni')    
+function p(){
+        correntThisImg++
+        if (correntThisImg === imgArray.length) {
+            correntThisImg = 0
+        }
+        thisimg.src = imgArray[correntThisImg];
+    
+}
+function n(){
+   
+        correntThisImg--
+        if (correntThisImg < 0) {
+            correntThisImg = imgArray.length - 1
+        }
+        thisimg.src = imgArray[correntThisImg];
 
-    setInterval(() => {
-        thisimg.classList.remove('addAni')    
-
-    }, 1500);
-
-
-})
-
-btnP.addEventListener('click', function () {
-    correntThisImg--
-    if (correntThisImg < 0) {
-        correntThisImg = imgArray.length - 1
-    }
-    thisimg.src = imgArray[correntThisImg];
+}
 
 
-})
+btnN.addEventListener('click', n)
+btnP.addEventListener('click', p)
+
+setInterval(() => {
+    n()
+}, 2000);
 
 
+
+
+
+
+setInterval(() => {
+
+}, 3000);
