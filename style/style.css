@@ -782,25 +782,50 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    background: #000000a1;
 }
 
 .slider img {
     width: 100%;
-    z-index: 9999999;
-    transition: 1s;
+    z-index:1 ;
 }
 
 
 .btnpre, .btnnex {
     height: 100%;
     width: 50px;
-    background: rgba(220, 20, 60, 0.445);
+    background: rgba(0, 0, 0, 0.377);
     cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size:25px;
 }
 
+.btnnex {
+    right: 0;
+}
 
-.btnpre:hover, .btnnex:hover {
-    background-color: #000000a2;
-} 
+.btnpre {
+    left: 0;
+}
+
+.addAni {
+    animation: ani 1.5s forwards;
+    opacity: 0;
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+
+ 
 
 

@@ -6,7 +6,8 @@ const imgArray = [
     'https://vignette.wikia.nocookie.net/5df42e00-8cab-492c-9a17-559d7b25c637/scale-to-width-down/1200',
     'https://images3.imgbox.com/76/7d/5yEX0wdl_o.jpg',
     'https://i.pinimg.com/originals/5c/48/fc/5c48fc38ad0d1bc3a9579b56647f6ec2.jpg',
-    'http://images2.fanpop.com/images/photos/4900000/Pinocchio-pinocchio-4979486-960-720.jpg'
+    'http://images2.fanpop.com/images/photos/4900000/Pinocchio-pinocchio-4979486-960-720.jpg',
+    'https://i.gifer.com/Wi3F.gif'
 ]
 
 let correntThisImg = 0
@@ -21,6 +22,12 @@ btnN.addEventListener('click', function () {
         correntThisImg = 0
     }
     thisimg.src = imgArray[correntThisImg];
+    thisimg.classList.add('addAni')    
+
+    setInterval(() => {
+        thisimg.classList.remove('addAni')    
+
+    }, 1500);
 
 
 })
@@ -34,3 +41,5 @@ btnP.addEventListener('click', function () {
 
 
 })
+
+
