@@ -1,7 +1,3 @@
-const {
-    renderSlot
-} = require("@vue/runtime-core")
-
 let menuHover = document.querySelector('.menu-hover')
 let menu = document.querySelector('.menu')
 let blockSlide = document.querySelector('.block-slide')
@@ -144,6 +140,7 @@ function addTodo() {
 
 function startGame() {
 
+
     function muz() {
         var audio = new Audio(); // Создаём новый элемент Audio
         audio.src = '2.mp3'; // Указываем путь к звуку "клика"
@@ -163,7 +160,7 @@ function startGame() {
 
 
     let counter = 0; //счетчик убийств
-    let timeGame = 10000 //время раунда
+    let timeGame = 20000 //время раунда
 
     block.addEventListener('click', GoGame)
 
@@ -187,9 +184,6 @@ function startGame() {
             audio.autoplay = true; // Автоматически запускаем
         }
 
-       
-
-        
 
         soundClick()
 
@@ -227,16 +221,22 @@ function startGame() {
         dis.innerHTML += finish
         console.log(finish)
 
-    
+
 
         function finalSound() {
             var audio = new Audio(); // Создаём новый элемент Audio
             audio.src = '3.mp3'; // Указываем путь к звуку "клика"
             audio.autoplay = true; // Автоматически запускаем
         }
-        finalSound() 
+        finalSound()
     }
 
 
 
 }
+
+
+
+
+
+//слйдер

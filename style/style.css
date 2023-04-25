@@ -1,3 +1,7 @@
+body{
+    transition: 0.6s
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rubik+Wet+Paint&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Raleway:wght@200&family=Rubik+Wet+Paint&display=swap');
@@ -762,4 +766,41 @@ footer {
     top: 50%;                         
     transform: translate(50%, -50%)
 }
+
+
+.cont-slider {
+    margin-top: 50px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider img {
+    width: 100%;
+    z-index: 9999999;
+    transition: 1s;
+}
+
+
+.btnpre, .btnnex {
+    height: 100%;
+    width: 50px;
+    background: rgba(220, 20, 60, 0.445);
+    cursor: pointer;
+}
+
+
+.btnpre:hover, .btnnex:hover {
+    background-color: #000000a2;
+} 
+
 
